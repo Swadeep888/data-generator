@@ -20,7 +20,7 @@ steps:
     githubToken: '${Token}'
     addToPath: true
     architecture: 'x64'
-  displayName: 'Use Python $(python.version)'
+  displayName: 'Use Python >=3.9'
   
 
 - script: |
@@ -31,7 +31,7 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
-    script: 'python3 dataGenerator.py'
+    script: 'python ./dataGenerator.py'
     workingDirectory: '/home/vsts/work/1/s'
     
     
