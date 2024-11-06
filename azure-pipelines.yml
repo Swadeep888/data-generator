@@ -32,5 +32,5 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: 'python3 dataGenerator.py'
-    workingDirectory: 'System.DefaultWorkingDirectory'
+    
     
