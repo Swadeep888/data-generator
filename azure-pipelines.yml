@@ -21,15 +21,7 @@ steps:
     addToPath: true
     architecture: 'x64'
   displayName: 'Use Python >=3.0'
-  
-
-- script: |  
-    echo "Setting up Python environment"  
-    python -m venv myenv  
-    source myenv/bin/activate  
-    pip install -r requirements.txt  
-  displayName: 'Set up Python environment and install dependencies'  
-  
+    
   
 - task: CmdLine@2
   inputs:
@@ -41,6 +33,7 @@ steps:
       dir
       
 - script: |  
+    pip install -r requirements.txt 
     echo "Running Python script"  
     python dataGenerator.py  
   displayName: 'Run Python Script' 
