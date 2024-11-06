@@ -10,14 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 variables: 
-   variable_group: DayTrackingVar
+- group: DayTrackingVar
   
 
 steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '>=3.0'
-    githubToken: '${Token}'
+    githubToken: '$(Token)'
     addToPath: true
     architecture: 'x64'
   displayName: 'Use Python >=3.0'
