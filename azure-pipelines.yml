@@ -45,9 +45,11 @@ steps:
     git add data.csv 
     git commit -m "Update CSV file" 
     git push origin HEAD:Swadeep888/data-generator
+    echo "##vso[task.setvariable variable=;]myValue"
+
   displayName: 'Commit and push changes' 
   env:
-    githubToken: '$(Token)'
+    GITHUB_TOKEN: $(Token)
     
 
      
