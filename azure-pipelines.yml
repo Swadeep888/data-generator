@@ -39,7 +39,8 @@ steps:
 
 - script: | 
     git config --global user.email "swa.deep@outlook.com" 
-    git config --global user.name "Swadeep888" 
+    git config --global user.name "Swadeep888"
+    git config --global --add url."git@github.com:Swadeep888/data-generator".insteadOf "https://github.com/Swadeep888/data-generator" 
     git clone https://github.com/Swadeep888/data-generator.git
     git add data.csv 
     git commit -m "Update CSV file" 
