@@ -40,6 +40,16 @@ steps:
     python dataGenerator.py  
   displayName: 'Run Python Script' 
 
+- script: | 
+    git config --global user.email "swa.deep@outlook.com" 
+    git config --global user.name "Swadeep888" 
+    git add data.csv 
+    git commit -m "Update CSV file" 
+    git push 
+  displayName: 'Commit and push changes' 
+  env: 
+    GITHUB_TOKEN: $(Token)  
+
 - task: CmdLine@2
   inputs:
     script: |
