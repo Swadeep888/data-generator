@@ -43,9 +43,10 @@ steps:
 - script: | 
     git config --global user.email "swa.deep@outlook.com" 
     git config --global user.name "Swadeep888" 
+    git clone https://github.com/Swadeep888/data-generator.git
     git add data.csv 
     git commit -m "Update CSV file" 
-    git push https://github.com/Swadeep888/data-generator.git
+    git push HEAD:Swadeep888/data-generator
   displayName: 'Commit and push changes' 
   
 
