@@ -43,7 +43,7 @@ steps:
     git clone https://github.com/Swadeep888/DayTracking.git
     git add data.csv 
     git commit -m "Update CSV file" 
-    git push origin HEAD:Swadeep888/DayTracking
+    git push -u origin main
 
   displayName: 'Commit and push changes' 
   env:
