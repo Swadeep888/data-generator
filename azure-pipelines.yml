@@ -32,6 +32,8 @@ steps:
 
       dir
       
+      type data.csv
+      
 - script: |  
     pip install -r requirements.txt 
     echo "Running Python script"  
@@ -45,7 +47,7 @@ steps:
       
       echo  '$(System.DefaultWorkingDirectory)'
 
-      type data.csv
+      type /home/vsts/work/1/s/data.csv
       
      
  
