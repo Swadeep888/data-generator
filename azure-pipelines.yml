@@ -45,7 +45,7 @@ steps:
     git config --global user.name "Swadeep888" 
     git add data.csv 
     git commit -m "Update CSV file" 
-    git push 
+    git push origin HEAD:Swadeep888/data-generator
   displayName: 'Commit and push changes' 
   env: 
     GITHUB_TOKEN: $(Token)  
