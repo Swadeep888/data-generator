@@ -31,7 +31,7 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
-    script: 'python ./dataGenerator.py'
+    script: echo  '$(System.DefaultWorkingDirectory)'
     workingDirectory: '/home/vsts/work/1/s'
     
     
