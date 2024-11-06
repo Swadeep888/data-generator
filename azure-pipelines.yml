@@ -14,6 +14,7 @@ variables:
   
 
 steps:
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '>=3.0'
@@ -27,18 +28,14 @@ steps:
   inputs:
     script: |
       echo Working Directory
-      
       echo  '$(System.DefaultWorkingDirectory)'
-
       dir
-      
       cat data.csv
-      
-- script: |  
-    pip install -r requirements.txt 
-    echo "Running Python script"  
-    python dataGenerator.py  
-  displayName: 'Run Python Script' 
+      pip install -r requirements.txt 
+      echo "Running Python script"  
+      python dataGenerator.py  
+     
+
 
 - script: | 
     git config --global user.email "swa.deep@outlook.com" 
@@ -48,16 +45,9 @@ steps:
     git commit -m "Update CSV file" 
     git push origin HEAD:Swadeep888/data-generator
   displayName: 'Commit and push changes' 
-  
+  env:
+    githubToken: '$(Token)'
+    
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Working Directory
-      
-      echo  '$(System.DefaultWorkingDirectory)'
-
-      cat /home/vsts/work/1/s/data.csv
-      
      
  
