@@ -32,7 +32,7 @@ steps:
 
       dir
       
-      type data.csv
+      cat data.csv
       
 - script: |  
     pip install -r requirements.txt 
@@ -47,7 +47,7 @@ steps:
       
       echo  '$(System.DefaultWorkingDirectory)'
 
-      type /home/vsts/work/1/s/data.csv
+      cat /home/vsts/work/1/s/data.csv
       
      
  
