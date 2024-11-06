@@ -48,7 +48,7 @@ steps:
     git push origin HEAD:Swadeep888/data-generator
   displayName: 'Commit and push changes' 
   env: 
-    GITHUB_TOKEN: $(Token)  
+   githubToken: $(Token)  
 
 - task: CmdLine@2
   inputs:
