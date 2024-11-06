@@ -43,10 +43,9 @@ steps:
 - script: | 
     git config --global user.email "swa.deep@outlook.com" 
     git config --global user.name "Swadeep888" 
-    git remote set-url origin https://$(Token):x-oauth-basic@github.com/Swadeep888/data-generator * g
     git add data.csv 
     git commit -m "Update CSV file" 
-    git push origin HEAD:Swadeep888/data-generator
+    git push https://github.com/Swadeep888/data-generator.git
   displayName: 'Commit and push changes' 
   
 
