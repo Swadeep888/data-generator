@@ -46,7 +46,7 @@ steps:
     git clone https://github.com/Swadeep888/data-generator.git
     git add data.csv 
     git commit -m "Update CSV file" 
-    git push HEAD:Swadeep888/data-generator
+    git push origin HEAD:Swadeep888/data-generator
   displayName: 'Commit and push changes' 
   
 
