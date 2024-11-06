@@ -42,7 +42,7 @@ steps:
 
 - script: | 
     git config --global user.email "swa.deep@outlook.com" 
-    git config --global user.name "Swadeep888" 
+    # git config --global user.name "Swadeep888" 
     git add data.csv 
     git commit -m "Update CSV file" 
     git push origin HEAD:Swadeep888/data-generator
