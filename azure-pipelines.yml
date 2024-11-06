@@ -32,6 +32,6 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: echo  '$(System.DefaultWorkingDirectory)'
-    workingDirectory: '/home/vsts/work/1/s'
+    
     
     
