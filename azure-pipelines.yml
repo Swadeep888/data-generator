@@ -16,17 +16,20 @@ variables:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '>=3.9'
+    versionSpec: '>=3.0'
     githubToken: '${Token}'
     addToPath: true
     architecture: 'x64'
-  displayName: 'Use Python >=3.9'
+  displayName: 'Use Python >=3.0'
   
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
+- script: |  
+    echo "Setting up Python environment"  
+    python -m venv myenv  
+    source myenv/bin/activate  
+    pip install -r requirements.txt  
+  displayName: 'Set up Python environment and install dependencies'  
+  
   
 - task: CmdLine@2
   inputs:
@@ -37,14 +40,15 @@ steps:
 
       dir
       
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'inline'
-    script: |
-      python3 dataGenerator.py
+- script: |  
+    echo "Running Python script"  
+    python dataGenerator.py  
+  displayName: 'Run Python Script' 
+     
     
 - task: GitHubComment@0
   inputs:
     gitHubConnection: 'Swadeep888'
     repositoryName: '$(Build.Repository.Name)'
+    comment: 'New line added'
     
