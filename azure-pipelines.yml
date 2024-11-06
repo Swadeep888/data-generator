@@ -34,6 +34,8 @@ steps:
       echo Working Directory
       
       echo  '$(System.DefaultWorkingDirectory)'
+
+      dir
       
 # - task: PythonScript@0
 #   inputs:
