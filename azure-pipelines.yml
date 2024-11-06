@@ -9,11 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-strategy:
-  matrix:
-    Python38:
-      python.version: '3.8'
-    
 
 steps:
 - task: UsePythonVersion@0
@@ -30,3 +25,5 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: 'python3 dataGenerator.py'
+    workingDirectory: 'System.DefaultWorkingDirectory'
+    
