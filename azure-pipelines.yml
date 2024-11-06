@@ -37,10 +37,14 @@ steps:
 
       dir
       
-# - task: PythonScript@0
-#   inputs:
-#     scriptSource: 'inline'
-#     script: echo  '$(System.DefaultWorkingDirectory)'
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      python3 dataGenerator.py
     
-    
+- task: GitHubComment@0
+  inputs:
+    gitHubConnection: 'Swadeep888'
+    repositoryName: '$(Build.Repository.Name)'
     
