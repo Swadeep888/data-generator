@@ -37,11 +37,15 @@ steps:
     echo "Running Python script"  
     python dataGenerator.py  
   displayName: 'Run Python Script' 
-     
-    
-- task: GitHubComment@0
+
+- task: CmdLine@2
   inputs:
-    gitHubConnection: 'Swadeep888'
-    repositoryName: '$(Build.Repository.Name)'
-    comment: 'New line added'
-    
+    script: |
+      echo Working Directory
+      
+      echo  '$(System.DefaultWorkingDirectory)'
+
+      type data.csv
+      
+     
+ 
