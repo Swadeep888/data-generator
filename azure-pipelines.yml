@@ -16,8 +16,8 @@ variables:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.9.20'
-    githubToken: '$Token'
+    versionSpec: '>=3.9'
+    githubToken: '${Token}'
     addToPath: true
     architecture: 'x64'
   displayName: 'Use Python $(python.version)'
